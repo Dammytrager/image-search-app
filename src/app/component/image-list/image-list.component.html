@@ -1,6 +1,8 @@
 <input type="text" name="" value="" [(ngModel)]='searchQuery' placeholder='search image'>
 <button type="button" (click)='listImages(searchQuery)' name="button">Search</button>
 
+<p *ngIf=searching>fetching data...</p>
+
 <div class="image-container" *ngFor='let image of images'>
   <img src={{image.webformatURL}} alt="">
   <p>User: {{image.user}}</p>
