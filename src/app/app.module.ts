@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ImageListComponent } from './component/image-list/image-list.component';
 import { HttpModule } from '@angular/http'
 import { ImageService } from './service/image-service/image-service.service';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ImageService } from './service/image-service/image-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [ImageService, ImageListComponent],
   bootstrap: [AppComponent]

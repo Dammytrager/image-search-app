@@ -1,3 +1,9 @@
-<p>
-  image-list works!
-</p>
+<input type="text" name="" value="" [(ngModel)]='searchQuery' placeholder='search image'>
+<button type="button" (click)='listImages(searchQuery)' name="button">Search</button>
+
+<div class="image-container" *ngFor='let image of images'>
+  <img src={{image.webformatURL}} alt="">
+  <p>User: {{image.user}}</p>
+  <p>Likes: {{image.likes}}</p>
+  <p>Tags: {{image.tags}}</p>
+</div>

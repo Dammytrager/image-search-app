@@ -11,7 +11,7 @@ export class AppComponent {
 
   constructor(private getImages:ImageListComponent){}
 
-  getImagesFunction(){
-    this.getImages.listImages()
+  getImagesFunction(query){
+    this.getImages.listImages(query)
   }
 }
